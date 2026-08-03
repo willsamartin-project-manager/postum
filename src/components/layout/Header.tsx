@@ -2,15 +2,21 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { Shield, Lock, LayoutDashboard, FileText, Users, Settings, LogOut, Menu, X, User } from 'lucide-react';
 import { usePostum } from '@/context/postum-context';
 import { StatusBadge } from '@/components/ui/StatusBadge';
 
 export const Header: React.FC = () => {
   const pathname = usePathname();
+  const router = useRouter();
   const { profile, user, logout } = usePostum();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const handleLogout = async () => {
+    await logout();
+    router.push('/login');
+  };
 
   const isDashboard = pathname?.startsWith('/dashboard');
 
@@ -113,7 +119,7 @@ export const Header: React.FC = () => {
                 <span className="truncate">{profile?.full_name || user.email}</span>
               </Link>
               <button
-                onClick={logout}
+                onClick={handleLogout}
                 className="p-2 min-h-[38px] min-w-[38px] flex items-center justify-center text-[#78716C] hover:text-[#DC2626] hover:bg-red-50 rounded transition-colors"
                 title="Sair da conta"
               >
