@@ -3,8 +3,56 @@ import Link from 'next/link';
 import { Shield, Lock, Heart, Check, Clock, Bell, ArrowRight, ShieldCheck, Mail, Zap, FileText, CheckCircle2, ChevronRight, HelpCircle, AlertCircle, HeartHandshake } from 'lucide-react';
 
 export default function LandingPage() {
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'E se eu viajar ou ficar sem internet no dia do check-in?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'O Postum possui a Fase de Carência de 7 a 14 dias e o envio prévio da Carta de Aviso com 72h de antecedência antes de qualquer liberação. Você terá múltiplos avisos por E-mail e WhatsApp para responder em 1 clique com apenas um toque no celular.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'O Postum guarda o saldo das minhas contas ou senhas de acesso?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Não. Por diretriz estrita de segurança e conformidade LGPD, o Postum armazena apenas o mapeamento ("Possuo apólice no Banco X") e suas orientações aos destinatários. O resgate dos valores é feito diretamente pelos familiares perante as instituições com os documentos legais exigidos.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'O que acontece se eu não renovar o plano anual de R$ 49?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Pela nossa política humanizada, sua conta nunca é desativada abruptamente. Em caso de não renovação, a conta migra automaticamente para o plano Starter Free, garantindo que você continue protegido.',
+        },
+      },
+    ],
+  };
+
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Postum',
+    url: 'https://postum.app',
+    logo: 'https://postum.app/icon.png',
+    description: 'Plataforma privada e humanizada para mapeamento de legado e notificação pós-morte.',
+  };
+
   return (
     <div className="space-y-16 sm:space-y-24 pb-16 overflow-x-hidden w-full max-w-full">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
       {/* Hero Section */}
       <section className="relative pt-10 sm:pt-16 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-to-b from-[#FAFAF9] via-[#F5F5F4] to-[#FAFAF9] border-b border-[#E7E5E4] w-full">
         <div className="max-w-4xl mx-auto text-center relative z-10">

@@ -6,8 +6,54 @@ import { Footer } from '@/components/layout/Footer';
 import { MobileBottomNav } from '@/components/layout/MobileBottomNav';
 
 export const metadata: Metadata = {
-  title: 'Postum — Notificação Pós-Morte & Mapeamento de Legado',
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'https://postum.app'),
+  title: {
+    default: 'Postum — Notificação Pós-Morte & Mapeamento de Legado',
+    template: '%s | Postum',
+  },
   description: 'Plataforma minimalista, segura e humanizada para mapeamento de legado e transmissão de instruções aos familiares.',
+  keywords: [
+    'mapeamento de legado',
+    'notificação pós-morte',
+    'planejamento sucessório digital',
+    'herança digital',
+    'testamento digital',
+    'instruções pós-morte',
+    'segurança familiar',
+    'proteção de bens',
+  ],
+  authors: [{ name: 'Postum' }],
+  creator: 'Postum',
+  publisher: 'Postum',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'pt_BR',
+    url: 'https://postum.app',
+    title: 'Postum — Notificação Pós-Morte & Mapeamento de Legado',
+    description: 'Plataforma minimalista, segura e humanizada para mapeamento de legado e transmissão de instruções aos familiares.',
+    siteName: 'Postum',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Postum — Notificação Pós-Morte & Mapeamento de Legado',
+    description: 'Plataforma minimalista, segura e humanizada para mapeamento de legado e transmissão de instruções aos familiares.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export const viewport: Viewport = {
