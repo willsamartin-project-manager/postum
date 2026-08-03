@@ -59,11 +59,25 @@ CREATE TABLE IF NOT EXISTS checkin_logs (
   checked_at TIMESTAMPTZ DEFAULT NOW()
 );
 
+-- Transações (Mercado Pago PIX)
+CREATE TABLE IF NOT EXISTS transactions (
+  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+  user_id UUID REFERENCES profiles(id) ON DELETE CASCADE NOT NULL,
+  amount NUMERIC NOT NULL,
+  status TEXT DEFAULT 'pending', -- 'pending', 'approved', 'rejected'
+  provider_id TEXT, -- ID do pagamento no Mercado Pago
+  qr_code TEXT,
+  qr_code_base64 TEXT,
+  created_at TIMESTAMPTZ DEFAULT NOW(),
+  updated_at TIMESTAMPTZ DEFAULT NOW()
+);
+
 -- Regras de Row Level Security (RLS)
 ALTER TABLE profiles ENABLE ROW LEVEL SECURITY;
 ALTER TABLE recipients ENABLE ROW LEVEL SECURITY;
 ALTER TABLE notices ENABLE ROW LEVEL SECURITY;
 ALTER TABLE checkin_logs ENABLE ROW LEVEL SECURITY;
+ALTER TABLE transactions ENABLE ROW LEVEL SECURITY;
 
 CREATE POLICY "Users access own profile" ON profiles
   FOR ALL USING (auth.uid() = id);
@@ -75,6 +89,9 @@ CREATE POLICY "Users access own notices" ON notices
   FOR ALL USING (auth.uid() = user_id);
 
 CREATE POLICY "Users access own checkin logs" ON checkin_logs
+  FOR ALL USING (auth.uid() = user_id);
+
+CREATE POLICY "Users access own transactions" ON transactions
   FOR ALL USING (auth.uid() = user_id);
 
 -- Agendador pg_cron para a Edge Function process-checkins

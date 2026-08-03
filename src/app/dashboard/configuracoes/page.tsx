@@ -5,11 +5,13 @@ import Link from 'next/link';
 import { usePostum } from '@/context/postum-context';
 import { CheckinFrequency, SubscriptionPlan } from '@/lib/types';
 import { ProtocolSimulator } from '@/components/ui/ProtocolSimulator';
+import { CheckoutModal } from '@/components/modals/CheckoutModal';
 import { Settings, Shield, Clock, CreditCard, Bell, Sparkles, Check, AlertCircle, User } from 'lucide-react';
 
 export default function ConfiguracoesPage() {
   const { profile, updateFrequency, updatePlan } = usePostum();
   const [saveSuccess, setSaveSuccess] = useState(false);
+  const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
 
   const handleFrequencyChange = (freq: CheckinFrequency) => {
     updateFrequency(freq);
@@ -192,7 +194,7 @@ export default function ConfiguracoesPage() {
               </p>
             </div>
             <button
-              onClick={() => handlePlanToggle('annual_pro')}
+              onClick={() => setIsCheckoutOpen(true)}
               disabled={profile.plan === 'annual_pro'}
               className="w-full py-2.5 bg-[#0D9488] hover:bg-[#0F766E] text-white text-xs font-semibold rounded-md transition-colors shadow-accent-glow"
             >
@@ -204,6 +206,8 @@ export default function ConfiguracoesPage() {
 
       {/* Simulator Section */}
       <ProtocolSimulator />
+
+      <CheckoutModal isOpen={isCheckoutOpen} onClose={() => setIsCheckoutOpen(false)} />
     </div>
   );
 }
