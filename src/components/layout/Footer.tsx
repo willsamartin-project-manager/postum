@@ -41,7 +41,7 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-[#E7E5E4] pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#78716C]">
-          <p>© {new Date().getFullYear()} Postum — Preservando instruções com dignidade e privacidade.</p>
+          <p>© {new Date().getFullYear()} Postum — Preservando instruções com dignidade e privacidade. Desenvolvido por <a href="https://amazingflow.tech" target="_blank" rel="noopener noreferrer" className="hover:text-[#1C1917] transition-colors font-semibold">Amazing Flow</a>.</p>
           <div className="flex items-center gap-4">
             <Link href="/termos" className="hover:text-[#1C1917] transition-colors">Termos de Uso</Link>
             <Link href="/privacidade" className="hover:text-[#1C1917] transition-colors">Política de Privacidade</Link>

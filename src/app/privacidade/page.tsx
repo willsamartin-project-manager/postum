@@ -57,7 +57,7 @@ export default function PrivacidadePage() {
                   <UserCheck className="w-4 h-4 text-[#0D9488]" />
                   Dados do Titular da Conta
                 </h3>
-                <p className="text-xs text-[#57534E]">Nome completo, endereço de e-mail e número de telefone (WhatsApp) para o envio de lembretes de Check-in.</p>
+                <p className="text-xs text-[#57534E]">Nome completo e endereço de e-mail para o envio de lembretes de Check-in.</p>
               </div>
               <div className="p-4 bg-[#FAFAF9] rounded-lg border border-[#E7E5E4]">
                 <h3 className="font-semibold text-[#1C1917] text-xs mb-1 flex items-center gap-1.5">
@@ -137,10 +137,10 @@ export default function PrivacidadePage() {
               <p className="text-xs text-[#78716C]">Entre em contato diretamente com o nosso Encarregado de Dados (DPO).</p>
             </div>
             <a
-              href="mailto:privacidade@postum.app"
+              href="mailto:wilkinson@amazingflow.tech"
               className="inline-flex items-center justify-center px-4 py-2 bg-[#0F172A] hover:bg-[#1E293B] text-white text-xs font-semibold rounded-md transition-colors shrink-0"
             >
-              privacidade@postum.app
+              wilkinson@amazingflow.tech
             </a>
           </div>
         </div>

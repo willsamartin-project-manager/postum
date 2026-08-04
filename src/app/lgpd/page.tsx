@@ -135,11 +135,11 @@ export default function LgpdPage() {
               <Mail className="w-5 h-5 text-[#0D9488] shrink-0 mt-1" />
               <div>
                 <h3 className="font-semibold text-[#1C1917] text-base mb-1">Encarregado pelo Tratamento de Dados (DPO)</h3>
-                <p className="text-xs text-[#78716C]">E-mail para solicitações LGPD: <strong>dpo@postum.app</strong></p>
+                <p className="text-xs text-[#78716C]">E-mail para solicitações LGPD: <strong>wilkinson@amazingflow.tech</strong></p>
               </div>
             </div>
             <a
-              href="mailto:dpo@postum.app"
+              href="mailto:wilkinson@amazingflow.tech"
               className="inline-flex items-center justify-center px-4 py-2 bg-[#0F172A] hover:bg-[#1E293B] text-white text-xs font-semibold rounded-md transition-colors shrink-0"
             >
               Enviar Solicitação LGPD

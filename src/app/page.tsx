@@ -12,7 +12,7 @@ export default function LandingPage() {
         name: 'E se eu viajar ou ficar sem internet no dia do check-in?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'O Postum possui a Fase de Carência de 7 a 14 dias e o envio prévio da Carta de Aviso com 72h de antecedência antes de qualquer liberação. Você terá múltiplos avisos por E-mail e WhatsApp para responder em 1 clique com apenas um toque no celular.',
+          text: 'O Postum possui a Fase de Carência de 7 a 14 dias e o envio prévio da Carta de Aviso com 72h de antecedência antes de qualquer liberação. Você terá múltiplos avisos por E-mail para responder em 1 clique com apenas um toque no celular.',
         },
       },
       {
@@ -238,7 +238,7 @@ export default function LandingPage() {
             </div>
             <h3 className="font-serif font-bold text-base sm:text-lg text-[#1C1917] mb-2">Fase Ativa</h3>
             <p className="text-xs text-[#57534E] leading-relaxed">
-              Você escolhe a frequência do check-in (30, 60, 90 ou 180 dias). Receba um <strong>Magic Link</strong> por E-mail ou WhatsApp para confirmar que está bem em 1 clique.
+              Você escolhe a frequência do check-in (30, 60, 90 ou 180 dias). Receba um <strong>Magic Link</strong> por E-mail para confirmar que está bem em 1 clique.
             </p>
           </div>
 
@@ -260,7 +260,7 @@ export default function LandingPage() {
             </div>
             <h3 className="font-serif font-bold text-base sm:text-lg text-[#1C1917] mb-2">Carta de Aviso</h3>
             <p className="text-xs text-[#57534E] leading-relaxed">
-              Faltando 72h para o fim do prazo, você recebe um aviso de prioridade máxima com botão direto de cancelamento emergencial <em>("Estou bem! Manter conta ativa")</em>.
+              Faltando 72h para o fim do prazo, você recebe um aviso de prioridade máxima por e-mail com botão direto de cancelamento emergencial <em>("Estou bem! Manter conta ativa")</em>.
             </p>
           </div>
 
@@ -348,15 +348,15 @@ export default function LandingPage() {
                 </span>
               </div>
               <p className="text-xs text-slate-300 mb-5">
-                Proteção completa sem limites, acompanhamento por WhatsApp e flexibilidade total para o seu legado.
+                Proteção completa sem limites, flexibilidade total para o seu legado (Acompanhamento por WhatsApp em breve).
               </p>
               
               <div className="mb-1">
                 <span className="text-sm text-slate-400 line-through decoration-slate-500">De R$ 79,00</span>
               </div>
               <div className="flex items-baseline gap-1 mb-3">
-                <span className="font-serif text-3xl sm:text-4xl font-bold text-white">R$ 49</span>
-                <span className="text-xs text-slate-400">,00 / ano</span>
+                <span className="font-serif text-3xl sm:text-4xl font-bold text-white">R$ 1</span>
+                <span className="text-xs text-slate-400">,00 / ano (Teste)</span>
               </div>
               <p className="text-xs text-emerald-400 font-medium mb-8 bg-emerald-400/10 inline-block px-2.5 py-1.5 rounded border border-emerald-400/20">
                 Apenas R$ 4,08 por mês — Menos que um café.
@@ -373,7 +373,7 @@ export default function LandingPage() {
                 </li>
                 <li className="flex items-center gap-2">
                   <Check className="w-4 h-4 text-[#0D9488] shrink-0" />
-                  <span>Check-in multicanal (E-mail + WhatsApp)</span>
+                  <span>Check-in exclusivo por E-mail (WhatsApp em breve)</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <Check className="w-4 h-4 text-[#0D9488] shrink-0" />
@@ -390,7 +390,7 @@ export default function LandingPage() {
               href="/login"
               className="w-full py-3.5 bg-[#0D9488] hover:bg-[#0F766E] text-white font-semibold text-sm rounded-md text-center transition-colors shadow-accent-glow min-h-[44px] flex items-center justify-center"
             >
-              Garantir a Proteção da Minha Família
+              Garantir a Proteção da Minha Família (Teste R$ 1,00)
             </Link>
           </div>
         </div>
@@ -413,7 +413,7 @@ export default function LandingPage() {
               E se eu viajar ou ficar sem internet no dia do check-in?
             </h3>
             <p className="text-xs text-[#57534E] leading-relaxed">
-              O Postum possui a Fase de Carência de 7 a 14 dias e o envio prévio da Carta de Aviso com 72h de antecedência antes de qualquer liberação. Você terá múltiplos avisos por E-mail e WhatsApp para responder em 1 clique com apenas um toque no celular.
+              O Postum possui a Fase de Carência de 7 a 14 dias e o envio prévio da Carta de Aviso com 72h de antecedência antes de qualquer liberação. Você terá múltiplos avisos por E-mail para responder em 1 clique com apenas um toque no celular.
             </p>
           </div>
 

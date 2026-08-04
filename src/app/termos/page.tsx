@@ -90,7 +90,7 @@ export default function TermosPage() {
             <div className="space-y-2 bg-[#FAFAF9] p-4 rounded-lg border border-[#E7E5E4]">
               <div className="flex items-start gap-2">
                 <CheckCircle2 className="w-4 h-4 text-[#0D9488] shrink-0 mt-0.5" />
-                <span><strong>Check-in Simples:</strong> O envio do Check-in é realizado via Magic Link (e-mail ou WhatsApp) sem necessidade de login complexo.</span>
+                <span><strong>Check-in Simples:</strong> O envio do Check-in é realizado via Magic Link (e-mail) sem necessidade de login complexo.</span>
               </div>
               <div className="flex items-start gap-2">
                 <CheckCircle2 className="w-4 h-4 text-[#0D9488] shrink-0 mt-0.5" />
@@ -132,7 +132,7 @@ export default function TermosPage() {
               <p className="text-xs text-[#78716C]">Nossa equipe jurídica e de suporte está à disposição para esclarecimentos.</p>
             </div>
             <a
-              href="mailto:suporte@postum.app"
+              href="mailto:wilkinson@amazingflow.tech"
               className="inline-flex items-center justify-center px-4 py-2 bg-[#0F172A] hover:bg-[#1E293B] text-white text-xs font-semibold rounded-md transition-colors shrink-0"
             >
               Falar com o Suporte

@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { usePostum } from '@/context/postum-context';
 import { CheckinButton } from '@/components/ui/CheckinButton';
 import { StatusBadge } from '@/components/ui/StatusBadge';
-import { ProtocolSimulator } from '@/components/ui/ProtocolSimulator';
 import { NoticeModal } from '@/components/modals/NoticeModal';
 import { RecipientModal } from '@/components/modals/RecipientModal';
 import { Calendar, Shield, Building2, Users, ArrowRight, Plus, Clock, History, AlertTriangle, CheckCircle } from 'lucide-react';
@@ -205,9 +204,6 @@ export default function DashboardPage() {
           </Link>
         </div>
       </div>
-
-      {/* Protocol Simulator Tool */}
-      <ProtocolSimulator />
 
       {/* History Log */}
       <div className="bg-[#FAFAF9] border border-[#E7E5E4] rounded-xl p-5 sm:p-6">

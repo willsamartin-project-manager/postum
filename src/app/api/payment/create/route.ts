@@ -24,7 +24,7 @@ export async function POST(req: Request) {
 
     try {
         const { userId, email, firstName, cpf } = await req.json();
-        const amount = 49.00; // Postum Legado Pro Fixed Price
+        const amount = 1.00; // Postum Legado Pro Fixed Price (Test)
 
         const isTest = mpAccessToken.includes('TEST');
         
@@ -34,6 +34,11 @@ export async function POST(req: Request) {
         const payerEmail = isTest
             ? `player_${userId.substring(0, 4)}_${Date.now()}@temp.game`
             : (email || 'user@postum.app');
+
+        const origin = req.headers.get('origin') || 'https://postum.app';
+        const notificationUrl = origin.includes('localhost') 
+            ? 'https://postum.app/api/payment/webhook' 
+            : `${origin}/api/payment/webhook`;
 
         const paymentData = {
             body: {
@@ -49,8 +54,7 @@ export async function POST(req: Request) {
                     }
                 },
                 external_reference: userId, 
-                // Assumes deployment URL, for local it uses ngrok or similar
-                notification_url: `${req.headers.get('origin') || 'https://postum.app'}/api/payment/webhook`
+                notification_url: notificationUrl
             },
             requestOptions: { idempotencyKey }
         };
