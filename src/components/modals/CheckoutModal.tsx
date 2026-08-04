@@ -194,7 +194,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ isOpen, onClose })
               <div className="bg-[#0F172A] text-white p-4 rounded-xl shadow-inner">
                 <div className="flex items-center justify-between mb-1">
                   <span className="font-semibold text-sm">Postum Legado Pro</span>
-                  <span className="font-serif font-bold text-lg text-teal-300">R$ 1,00</span>
+                  <span className="font-serif font-bold text-lg text-teal-300">R$ 49,00</span>
                 </div>
                 <p className="text-xs text-slate-300">Assinatura Anual (Sem renovação automática)</p>
               </div>

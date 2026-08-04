@@ -236,8 +236,8 @@ export default function ConfiguracoesPage() {
                 <span className="text-sm text-slate-400 line-through decoration-slate-500">De R$ 79,00</span>
               </div>
               <div className="flex items-baseline gap-1 mb-3">
-                <span className="font-serif text-3xl sm:text-4xl font-bold text-white">R$ 1</span>
-                <span className="text-xs text-slate-400">,00 / ano (Teste)</span>
+                <span className="font-serif text-3xl sm:text-4xl font-bold text-white">R$ 49</span>
+                <span className="text-xs text-slate-400">,00 / ano</span>
               </div>
               <p className="text-[11px] sm:text-xs text-emerald-400 font-medium mb-8 bg-emerald-400/10 inline-block px-2.5 py-1.5 rounded border border-emerald-400/20">
                 Apenas R$ 4,08 por mês — Menos que um café.
@@ -272,7 +272,7 @@ export default function ConfiguracoesPage() {
               disabled={profile.plan === 'annual_pro'}
               className="w-full py-3.5 bg-[#0D9488] hover:bg-[#0F766E] text-white font-semibold text-sm rounded-md text-center transition-colors shadow-accent-glow min-h-[44px] flex items-center justify-center"
             >
-              {profile.plan === 'annual_pro' ? 'Plano Pro Ativo' : 'Ativar Plano Pro (R$ 1/ano)'}
+              {profile.plan === 'annual_pro' ? 'Plano Pro Ativo' : 'Ativar Plano Pro (R$ 49/ano)'}
             </button>
           </div>
         </div>

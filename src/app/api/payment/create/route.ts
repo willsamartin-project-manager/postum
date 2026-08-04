@@ -24,7 +24,7 @@ export async function POST(req: Request) {
 
     try {
         const { userId, email, firstName, cpf } = await req.json();
-        const amount = 1.00; // Postum Legado Pro Fixed Price (Test)
+        const amount = 49.00; // Postum Legado Pro Fixed Price
 
         const isTest = mpAccessToken.includes('TEST');
         
