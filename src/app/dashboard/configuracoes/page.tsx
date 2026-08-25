@@ -64,8 +64,9 @@ export default function ConfiguracoesPage() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
           {[
+            { id: '5_min', label: '5 Minutos', desc: 'Teste (Apenas para validação)' },
             { id: '30_days', label: '30 Dias', desc: 'Verificação mensal (Recomendado para máxima atualização)' },
             { id: '60_days', label: '60 Dias', desc: 'Bimestral (Padrão equilibrado)' },
             { id: '90_days', label: '90 Dias', desc: 'Trimestral' },

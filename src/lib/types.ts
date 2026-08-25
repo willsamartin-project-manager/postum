@@ -1,6 +1,6 @@
 export type UserStatus = 'active' | 'grace_period' | 'released' | 'paused_payment';
 
-export type CheckinFrequency = '30_days' | '60_days' | '90_days' | '180_days';
+export type CheckinFrequency = '5_min' | '30_days' | '60_days' | '90_days' | '180_days';
 
 export type SubscriptionPlan = 'starter_free' | 'annual_pro';
 
